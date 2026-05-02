@@ -12,7 +12,10 @@
     <meta property="og:description" content="Calculez vos droits de succession et découvrez combien vous pouvez économiser légalement. Résultats en 2 minutes.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
+
+    <!-- ===== REMPLACEZ ca-pub-6482998719757329 par votre ID Adsense ===== -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6482998719757329" crossorigin="anonymous"></script>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -178,6 +181,17 @@
     </style>
 </head>
 <body>
+
+<!-- NAV -->
+<nav style="background:#fff;border-bottom:1px solid #dde3eb;padding:12px 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.06);">
+  <div style="max-width:920px;margin:0 auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+    <a href="/" style="font-weight:800;color:#1a3a5c;text-decoration:none;font-size:1rem;margin-right:8px;">SimulateurSuccession.fr</a>
+    <a href="/donation.html" style="color:#555;text-decoration:none;font-size:.88rem;padding:4px 10px;border-radius:6px;" onmouseover="this.style.background='#f0f4f8'" onmouseout="this.style.background='none'">Donation</a>
+    <a href="/assurance-vie.html" style="color:#555;text-decoration:none;font-size:.88rem;padding:4px 10px;border-radius:6px;" onmouseover="this.style.background='#f0f4f8'" onmouseout="this.style.background='none'">Assurance-vie</a>
+    <a href="/comparateur.html" style="color:#555;text-decoration:none;font-size:.88rem;padding:4px 10px;border-radius:6px;" onmouseover="this.style.background='#f0f4f8'" onmouseout="this.style.background='none'">Trouver un CGP</a>
+    <a href="/blog/" style="color:#555;text-decoration:none;font-size:.88rem;padding:4px 10px;border-radius:6px;" onmouseover="this.style.background='#f0f4f8'" onmouseout="this.style.background='none'">Blog</a>
+  </div>
+</nav>
 
 <header>
     <div class="container">
@@ -366,6 +380,13 @@
 
         <div class="disclaimer">⚠️ <strong>Avertissement :</strong> Ce simulateur fournit une estimation indicative basée sur le barème 2026. Les droits réels dépendent du régime matrimonial, des clauses testamentaires, de la nature des biens, etc. Consultez un notaire ou un conseiller en gestion de patrimoine pour un conseil personnalisé.</div>
 
+        <!-- CGP LEAD -->
+        <div style="background:linear-gradient(135deg,#1a3a5c,#2c5f8a);border-radius:12px;padding:28px;margin:24px 0;color:#fff;text-align:center;">
+            <div style="font-size:1.3rem;font-weight:800;margin-bottom:8px;">Besoin d'un conseil personnalisé ?</div>
+            <p style="opacity:.85;margin-bottom:18px;font-size:.95rem;">Un conseiller en gestion de patrimoine peut vous faire économiser bien plus que les droits estimés ci-dessus.</p>
+            <button onclick="document.getElementById('cgp-modal').style.display='flex'" style="background:#e67e22;color:#fff;border:none;padding:14px 28px;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;">Être rappelé gratuitement par un CGP →</button>
+        </div>
+
         <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:24px;">
             <button class="btn btn-outline" onclick="window.print()">🖨️ Imprimer / Exporter PDF</button>
             <button class="btn btn-outline" onclick="resetSim()">↺ Nouvelle simulation</button>
@@ -395,6 +416,30 @@
         </p>
     </div>
 </footer>
+
+<!-- MODAL CGP -->
+<div id="cgp-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:999;align-items:center;justify-content:center;padding:20px;">
+  <div style="background:#fff;border-radius:16px;padding:32px;max-width:480px;width:100%;position:relative;">
+    <button onclick="document.getElementById('cgp-modal').style.display='none'" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:#888;">✕</button>
+    <h3 style="color:#1a3a5c;margin-bottom:8px;font-size:1.2rem;">Être rappelé par un CGP</h3>
+    <p style="color:#666;font-size:.88rem;margin-bottom:20px;">Consultation gratuite et sans engagement. Un conseiller agréé vous contacte sous 48h.</p>
+    <form action="https://formspree.io/f/xaqvqynb" method="POST" style="display:flex;flex-direction:column;gap:14px;">
+      <input type="text"  name="nom"       placeholder="Votre prénom et nom"  required style="padding:12px;border:2px solid #dde3eb;border-radius:8px;font-size:1rem;">
+      <input type="tel"   name="telephone" placeholder="Votre téléphone"       required style="padding:12px;border:2px solid #dde3eb;border-radius:8px;font-size:1rem;">
+      <input type="email" name="email"     placeholder="Votre email"           required style="padding:12px;border:2px solid #dde3eb;border-radius:8px;font-size:1rem;">
+      <select name="patrimoine" style="padding:12px;border:2px solid #dde3eb;border-radius:8px;font-size:1rem;">
+        <option value="">Patrimoine estimé</option>
+        <option>Moins de 100 000 €</option>
+        <option>100 000 — 300 000 €</option>
+        <option>300 000 — 600 000 €</option>
+        <option>600 000 — 1 000 000 €</option>
+        <option>Plus de 1 000 000 €</option>
+      </select>
+      <button type="submit" style="background:#1a3a5c;color:#fff;border:none;padding:14px;border-radius:8px;font-size:1rem;font-weight:700;cursor:pointer;">Envoyer ma demande →</button>
+    </form>
+    <p style="font-size:.75rem;color:#aaa;margin-top:12px;text-align:center;">Données transmises uniquement au conseiller. Aucune vente de données.</p>
+  </div>
+</div>
 
 <!-- SCHEMA FAQ injecté dynamiquement -->
 <script id="faq-ld" type="application/ld+json">{}</script>
