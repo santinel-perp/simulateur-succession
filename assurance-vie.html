@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur Assurance-Vie et Succession 2026 — Calcul Abattement 152 500 €</title>
+    <meta name="description" content="Calculez l'impact de votre assurance-vie sur la succession. Abattement de 152 500 € par bénéficiaire avant 70 ans, fiscalité après 70 ans, optimisation gratuite.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://simulateur-succession.fr/assurance-vie.html">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6482998719757329" crossorigin="anonymous"></script>
+    <style>
+        :root{--primary:#1a3a5c;--accent:#e67e22;--green:#27ae60;--light:#f7f9fc;--dark:#2c3e50;--border:#dde3eb;--radius:12px;}
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--dark);background:#fff;line-height:1.6;}
+        nav{background:#fff;border-bottom:1px solid #dde3eb;padding:12px 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+        .nav-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+        .nav-inner a{color:#555;text-decoration:none;font-size:.88rem;padding:4px 10px;border-radius:6px;}
+        .nav-inner a:hover{background:#f0f4f8;}
+        .nav-brand{font-weight:800;color:#1a3a5c!important;font-size:1rem;margin-right:8px;}
+        header{background:linear-gradient(135deg,#1a3a5c,#2c5f8a);color:#fff;padding:44px 20px 36px;text-align:center;}
+        header h1{font-size:clamp(1.4rem,4vw,2.3rem);font-weight:800;margin-bottom:12px;}
+        header p{opacity:.9;max-width:600px;margin:0 auto 20px;font-size:1rem;}
+        .badge-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+        .badge{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:5px 14px;font-size:.82rem;}
+        .container{max-width:920px;margin:0 auto;padding:0 20px;}
+        section{padding:36px 0;border-bottom:1px solid var(--border);}
+        .section-title{font-size:1.3rem;font-weight:700;color:var(--primary);margin-bottom:6px;}
+        .section-sub{color:#666;margin-bottom:22px;font-size:.93rem;}
+        .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+        @media(max-width:580px){.form-grid{grid-template-columns:1fr;}}
+        .form-group{display:flex;flex-direction:column;gap:6px;}
+        label{font-weight:600;font-size:.88rem;}
+        input[type="number"],select{padding:11px 14px;border:2px solid var(--border);border-radius:8px;font-size:1rem;background:#fff;}
+        input:focus,select:focus{outline:none;border-color:var(--primary);}
+        .btn-primary{background:var(--primary);color:#fff;width:100%;font-size:1.1rem;padding:16px;margin-top:20px;border:none;border-radius:8px;cursor:pointer;font-weight:700;}
+        .btn-primary:hover{background:#1e4976;}
+        #results{display:none;}
+        .scenario-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px;}
+        @media(max-width:580px){.scenario-grid{grid-template-columns:1fr;}}
+        .scenario-card{border-radius:var(--radius);padding:22px;}
+        .scenario-card.bad{background:#fde8e8;border:2px solid #fca5a5;}
+        .scenario-card.good{background:#d1fae5;border:2px solid #6ee7b7;}
+        .scenario-label{font-size:.82rem;font-weight:700;margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px;}
+        .scenario-label.bad{color:#991b1b;}
+        .scenario-label.good{color:#065f46;}
+        .scenario-amount{font-size:1.8rem;font-weight:900;margin-bottom:4px;}
+        .scenario-amount.bad{color:#991b1b;}
+        .scenario-amount.good{color:#065f46;}
+        .scenario-desc{font-size:.82rem;color:#555;margin-top:8px;}
+        .gain-box{background:linear-gradient(135deg,#155e32,#27ae60);color:#fff;border-radius:var(--radius);padding:24px;margin:20px 0;text-align:center;}
+        .gain-box h3{font-size:.9rem;opacity:.85;margin-bottom:4px;}
+        .gain-amount{font-size:2.5rem;font-weight:900;}
+        .table-av{width:100%;border-collapse:collapse;margin-top:16px;}
+        .table-av th{background:var(--light);padding:10px 14px;text-align:left;font-size:.82rem;color:#555;border-bottom:2px solid var(--border);}
+        .table-av td{padding:12px 14px;border-bottom:1px solid var(--border);font-size:.9rem;}
+        .table-av tr:last-child td{border-bottom:none;}
+        .highlight{background:var(--light);border-left:4px solid var(--primary);padding:14px 18px;border-radius:0 8px 8px 0;margin:16px 0;font-size:.9rem;}
+        .ad-wrap{margin:24px 0;min-height:90px;}
+        footer{background:var(--light);border-top:1px solid var(--border);padding:28px 20px;text-align:center;color:#888;font-size:.82rem;}
+        footer a{color:#888;}
+    </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="./" class="nav-brand">SimulateurSuccession.fr</a>
+    <a href="./">Succession</a>
+    <a href="donation.html">Donation</a>
+    <a href="assurance-vie.html" style="color:#1a3a5c;font-weight:700;">Assurance-vie</a>
+    <a href="comparateur.html">Trouver un CGP</a>
+    <a href="blog/">Blog</a>
+  </div>
+</nav>
+
+<header>
+  <div class="container">
+    <h1>Simulateur Assurance-Vie & Succession 2026</h1>
+    <p>Calculez l'impact fiscal de votre assurance-vie : abattement 152 500 €, fiscalité avant et après 70 ans, économies réelles</p>
+    <div class="badge-row">
+      <span class="badge">✓ Abattement 152 500 € / bénéficiaire</span>
+      <span class="badge">✓ Avant et après 70 ans</span>
+      <span class="badge">✓ Comparatif succession classique</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6482998719757329" data-ad-slot="6666666666" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <section>
+    <div class="section-title">Votre assurance-vie</div>
+    <p class="section-sub">Simulez la fiscalité de votre AV selon votre situation</p>
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Capital total de l'AV (€)</label>
+        <input type="number" id="capital" value="200000" min="0" step="5000">
+      </div>
+      <div class="form-group">
+        <label>Dont primes versées avant 70 ans (€)</label>
+        <input type="number" id="avant70" value="150000" min="0" step="5000">
+      </div>
+      <div class="form-group">
+        <label>Dont primes versées après 70 ans (€)</label>
+        <input type="number" id="apres70" value="50000" min="0" step="5000">
+      </div>
+      <div class="form-group">
+        <label>Nombre de bénéficiaires désignés</label>
+        <input type="number" id="nb_benef" value="2" min="1" max="10">
+      </div>
+      <div class="form-group">
+        <label>Lien avec les bénéficiaires</label>
+        <select id="lien_benef">
+          <option value="enfant">Enfants</option>
+          <option value="conjoint">Conjoint / PACS</option>
+          <option value="autre">Autre (neveu, ami...)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Plus-values / intérêts dans l'AV (€)</label>
+        <input type="number" id="plusvalues" value="30000" min="0" step="1000">
+      </div>
+    </div>
+    <button class="btn-primary" onclick="calc()">Calculer la fiscalité de mon assurance-vie →</button>
+  </section>
+
+  <section id="results">
+
+    <h3 class="section-title">Assurance-vie vs Succession classique</h3>
+    <p class="section-sub">Comparaison de ce que reçoivent réellement vos bénéficiaires</p>
+
+    <div class="scenario-grid">
+      <div class="scenario-card bad">
+        <div class="scenario-label bad">Sans assurance-vie</div>
+        <div class="scenario-amount bad" id="r-sans-av">—</div>
+        <div class="scenario-desc">Droits de succession au barème normal, après abattement de droit commun</div>
+      </div>
+      <div class="scenario-card good">
+        <div class="scenario-label good">Avec votre assurance-vie</div>
+        <div class="scenario-amount good" id="r-avec-av">—</div>
+        <div class="scenario-desc">Fiscalité AV + abattement 152 500 € par bénéficiaire</div>
+      </div>
+    </div>
+
+    <div class="gain-box" id="gain-box">
+      <h3>Économie grâce à l'assurance-vie</h3>
+      <div class="gain-amount" id="gain-amount">—</div>
+      <p id="gain-desc" style="opacity:.85;font-size:.9rem;margin-top:6px;"></p>
+    </div>
+
+    <div class="ad-wrap">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6482998719757329" data-ad-slot="7777777777" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <h3 class="section-title" style="margin-top:8px;">Détail de la fiscalité</h3>
+    <div style="overflow-x:auto;">
+      <table class="table-av">
+        <thead><tr><th>Composante</th><th>Montant</th><th>Fiscalité</th><th>Impôt</th><th>Net reçu</th></tr></thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+
+    <div class="highlight" style="margin-top:20px;">
+      <strong>Astuce souvent ignorée :</strong> Les <strong>intérêts et plus-values</strong> générés par les primes versées après 70 ans restent <strong>totalement exonérés de droits de succession</strong>, quelle que soit leur montant. Seules les primes elles-mêmes (hors abattement de 30 500 €) entrent en succession.
+    </div>
+
+  </section>
+
+  <section>
+    <div class="section-title">Barème assurance-vie 2026</div>
+    <div style="overflow-x:auto;margin-top:16px;">
+      <table class="table-av">
+        <thead><tr><th>Primes versées</th><th>Abattement</th><th>Taux</th><th>Condition</th></tr></thead>
+        <tbody>
+          <tr><td>Avant 70 ans</td><td>152 500 € / bénéficiaire</td><td>20% (jusqu'à 700 000 €) puis 31,25%</td><td>Par bénéficiaire désigné</td></tr>
+          <tr><td>Après 70 ans</td><td>30 500 € global</td><td>Droits de succession normaux sur les primes</td><td>Les intérêts restent exonérés</td></tr>
+          <tr><td>Conjoint / PACS</td><td>Exonération totale</td><td>0%</td><td>Quel que soit l'âge de versement</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <p><strong>SimulateurSuccession.fr</strong> — Outil gratuit d'estimation</p>
+  <p style="margin-top:8px;"><a href="./">Succession</a> · <a href="donation.html">Donation</a> · <a href="assurance-vie.html">Assurance-vie</a> · <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></p>
+</footer>
+
+<script>
+function euro(n){return new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);}
+function droitsNormaux(base,lien){
+  if(base<=0)return 0;
+  const baremes={
+    enfant:[{m:8072,t:.05},{m:12109,t:.10},{m:15932,t:.15},{m:552324,t:.20},{m:902838,t:.30},{m:1805677,t:.35},{m:1e15,t:.45}],
+    conjoint:[{m:1e15,t:0}],
+    autre:[{m:1e15,t:.60}],
+  };
+  const b=baremes[lien]||baremes.autre;
+  let d=0,p=0;
+  for(const t of b){if(base<=0)break;const s=Math.min(base,t.m-p);d+=s*t.t;base-=s;p=t.m;}
+  return Math.round(d);
+}
+
+function calc(){
+  const capital=+document.getElementById('capital').value||0;
+  const avant70=Math.min(+document.getElementById('avant70').value||0,capital);
+  const apres70=Math.min(+document.getElementById('apres70').value||0,capital-avant70);
+  const nbBenef=+document.getElementById('nb_benef').value||1;
+  const lien=document.getElementById('lien_benef').value;
+  const plusvalues=+document.getElementById('plusvalues').value||0;
+
+  // AV avant 70 ans
+  const abattAv70=152500*nbBenef;
+  const baseAv70=Math.max(0,avant70-abattAv70);
+  let impotAv70=0;
+  if(lien!=='conjoint'){
+    const tranche1=Math.min(baseAv70,700000*nbBenef);
+    impotAv70=tranche1*0.20+Math.max(0,baseAv70-700000*nbBenef)*0.3125;
+  }
+
+  // AV après 70 ans — primes seules en succession, intérêts exonérés
+  const abattAp70=30500;
+  const primesAp70Imposables=Math.max(0,apres70-plusvalues-abattAp70);
+  const impotAp70=lien==='conjoint'?0:droitsNormaux(primesAp70Imposables/nbBenef,lien)*nbBenef;
+
+  const totalImpotAV=Math.round(impotAv70+impotAp70);
+  const netAvecAV=capital-totalImpotAV;
+
+  // Succession classique (sans AV)
+  const abattSuccession=lien==='conjoint'?capital:100000*nbBenef;
+  const baseSuccession=Math.max(0,capital-abattSuccession);
+  const impotSuccession=lien==='conjoint'?0:droitsNormaux(baseSuccession/nbBenef,lien)*nbBenef;
+  const netSansAV=capital-impotSuccession;
+
+  const gain=Math.max(0,netAvecAV-netSansAV);
+
+  document.getElementById('r-sans-av').textContent=euro(netSansAV);
+  document.getElementById('r-avec-av').textContent=euro(netAvecAV);
+  document.getElementById('gain-amount').textContent=euro(gain);
+  document.getElementById('gain-desc').textContent=`soit ${(gain/Math.max(1,capital)*100).toFixed(1)}% du capital préservé grâce à la fiscalité avantageuse de l'assurance-vie`;
+
+  document.getElementById('table-body').innerHTML=`
+    <tr><td>Primes avant 70 ans</td><td>${euro(avant70)}</td><td>Abatt. ${euro(abattAv70)} puis 20%/31,25%</td><td style="color:#991b1b;font-weight:700;">${euro(Math.round(impotAv70))}</td><td style="color:#065f46;font-weight:700;">${euro(avant70-Math.round(impotAv70))}</td></tr>
+    <tr><td>Primes après 70 ans</td><td>${euro(apres70-plusvalues)}</td><td>Abatt. ${euro(abattAp70)} global puis succession</td><td style="color:#991b1b;font-weight:700;">${euro(impotAp70)}</td><td style="color:#065f46;font-weight:700;">${euro(apres70-plusvalues-impotAp70)}</td></tr>
+    <tr><td>Intérêts/plus-values (après 70 ans)</td><td>${euro(plusvalues)}</td><td style="color:#065f46;font-weight:700;">Exonérés totalement</td><td style="color:#065f46;font-weight:700;">0 €</td><td style="color:#065f46;font-weight:700;">${euro(plusvalues)}</td></tr>
+    <tr style="background:#f7f9fc;font-weight:700;"><td>TOTAL</td><td>${euro(capital)}</td><td>—</td><td style="color:#991b1b;">${euro(totalImpotAV)}</td><td style="color:#065f46;">${euro(netAvecAV)}</td></tr>
+  `;
+
+  document.getElementById('results').style.display='block';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+</body>
+</html>

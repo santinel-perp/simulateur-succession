@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur Donation de son Vivant 2026 — Calcul Droits et Abattements Gratuit</title>
+    <meta name="description" content="Calculez les droits de donation de votre vivant en 2026. Abattements par lien de parenté, don tous les 15 ans, don Sarkozy : optimisez votre transmission sans attendre.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://simulateur-succession.fr/donation.html">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6482998719757329" crossorigin="anonymous"></script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Simulateur Donation 2026","applicationCategory":"FinanceApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"inLanguage":"fr"}</script>
+    <style>
+        :root { --primary:#1a3a5c; --accent:#e67e22; --green:#27ae60; --red:#e74c3c; --light:#f7f9fc; --dark:#2c3e50; --border:#dde3eb; --radius:12px; }
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:var(--dark);background:#fff;line-height:1.6;}
+        nav{background:#fff;border-bottom:1px solid #dde3eb;padding:12px 20px;position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+        .nav-inner{max-width:920px;margin:0 auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+        .nav-inner a{color:#555;text-decoration:none;font-size:.88rem;padding:4px 10px;border-radius:6px;}
+        .nav-inner a:hover{background:#f0f4f8;}
+        .nav-brand{font-weight:800;color:#1a3a5c!important;font-size:1rem;margin-right:8px;}
+        header{background:linear-gradient(135deg,#1a3a5c,#2c5f8a);color:#fff;padding:44px 20px 36px;text-align:center;}
+        header h1{font-size:clamp(1.4rem,4vw,2.4rem);font-weight:800;margin-bottom:12px;}
+        header p{opacity:.9;max-width:600px;margin:0 auto 20px;font-size:1rem;}
+        .badge-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+        .badge{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);border-radius:20px;padding:5px 14px;font-size:.82rem;}
+        .container{max-width:920px;margin:0 auto;padding:0 20px;}
+        section{padding:36px 0;border-bottom:1px solid var(--border);}
+        .section-title{font-size:1.3rem;font-weight:700;color:var(--primary);margin-bottom:6px;}
+        .section-sub{color:#666;margin-bottom:22px;font-size:.93rem;}
+        .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+        @media(max-width:580px){.form-grid{grid-template-columns:1fr;}}
+        .form-group{display:flex;flex-direction:column;gap:6px;}
+        .form-group.full{grid-column:1/-1;}
+        label{font-weight:600;font-size:.88rem;}
+        input[type="number"],select{padding:11px 14px;border:2px solid var(--border);border-radius:8px;font-size:1rem;background:#fff;transition:border-color .2s;}
+        input:focus,select:focus{outline:none;border-color:var(--primary);}
+        .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:8px;border:none;cursor:pointer;font-size:1rem;font-weight:600;transition:all .2s;}
+        .btn-primary{background:var(--primary);color:#fff;width:100%;font-size:1.1rem;padding:16px;margin-top:20px;}
+        .btn-primary:hover{background:#1e4976;transform:translateY(-1px);}
+        #results{display:none;}
+        .res-hero{background:linear-gradient(135deg,#1a3a5c,#2c5f8a);color:#fff;border-radius:var(--radius);padding:28px;margin-bottom:20px;}
+        .res-hero h2{font-size:.95rem;opacity:.75;margin-bottom:6px;}
+        .big-num{font-size:clamp(1.8rem,5vw,3rem);font-weight:900;margin-bottom:8px;}
+        .big-num.green{color:#5ced8c;}
+        .big-num.orange{color:#f6c90e;}
+        .res-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px;}
+        @media(max-width:480px){.res-grid{grid-template-columns:1fr;}}
+        .res-card{background:rgba(255,255,255,.1);border-radius:8px;padding:14px;}
+        .res-card label{font-size:.75rem;opacity:.7;color:#fff;display:block;margin-bottom:4px;}
+        .res-card .val{font-size:1.2rem;font-weight:700;color:#fff;}
+        .info-box{background:var(--light);border-left:4px solid var(--primary);padding:14px 18px;border-radius:0 8px 8px 0;margin:20px 0;font-size:.9rem;}
+        .saving-box{background:linear-gradient(135deg,#155e32,#27ae60);color:#fff;border-radius:var(--radius);padding:24px;margin:20px 0;}
+        .saving-box h3{font-size:.9rem;opacity:.85;margin-bottom:4px;}
+        .saving-amount{font-size:2.2rem;font-weight:900;}
+        .cycle-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:16px;}
+        .cycle-card{border:2px solid var(--border);border-radius:var(--radius);padding:18px;text-align:center;}
+        .cycle-year{font-size:1.5rem;font-weight:800;color:var(--primary);}
+        .cycle-label{font-size:.82rem;color:#666;margin:4px 0;}
+        .cycle-val{font-size:1.1rem;font-weight:700;color:var(--green);}
+        .ad-wrap{margin:24px 0;text-align:center;min-height:90px;}
+        footer{background:var(--light);border-top:1px solid var(--border);padding:28px 20px;text-align:center;color:#888;font-size:.82rem;}
+        footer a{color:#888;}
+    </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="./" class="nav-brand">SimulateurSuccession.fr</a>
+    <a href="./">Succession</a>
+    <a href="donation.html" style="color:#1a3a5c;font-weight:700;">Donation</a>
+    <a href="assurance-vie.html">Assurance-vie</a>
+    <a href="comparateur.html">Trouver un CGP</a>
+    <a href="blog/">Blog</a>
+  </div>
+</nav>
+
+<header>
+  <div class="container">
+    <h1>Simulateur de Donation de son Vivant 2026</h1>
+    <p>Calculez les droits de donation, optimisez le timing et découvrez combien vous transmettez sans impôt</p>
+    <div class="badge-row">
+      <span class="badge">✓ Abattements 2026 à jour</span>
+      <span class="badge">✓ Don tous les 15 ans</span>
+      <span class="badge">✓ Don Sarkozy inclus</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="ad-wrap">
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6482998719757329" data-ad-slot="4444444444" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <section>
+    <div class="section-title">Paramètres de la donation</div>
+    <p class="section-sub">Simulez votre donation de votre vivant avec les abattements 2026</p>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Montant de la donation (€)</label>
+        <input type="number" id="montant" value="150000" min="0" step="5000">
+      </div>
+      <div class="form-group">
+        <label>Lien avec le bénéficiaire</label>
+        <select id="lien">
+          <option value="enfant">Enfant / Parent</option>
+          <option value="petit_enfant">Petit-enfant</option>
+          <option value="frere_soeur">Frère / Sœur</option>
+          <option value="neveu_niece">Neveu / Nièce</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Âge du donateur</label>
+        <input type="number" id="age" value="60" min="18" max="99">
+      </div>
+      <div class="form-group">
+        <label>Donations antérieures (- de 15 ans)</label>
+        <input type="number" id="ant" value="0" min="0" step="5000">
+      </div>
+      <div class="form-group full">
+        <label>Horizon de planification (années)</label>
+        <input type="number" id="horizon" value="20" min="1" max="40">
+      </div>
+    </div>
+
+    <button class="btn btn-primary" onclick="calc()">Calculer les droits de donation →</button>
+  </section>
+
+  <section id="results">
+
+    <div class="res-hero">
+      <h2>Droits de donation estimés</h2>
+      <div class="big-num orange" id="r-droits">—</div>
+      <div class="res-grid">
+        <div class="res-card"><label>Montant donné</label><div class="val" id="r-montant">—</div></div>
+        <div class="res-card"><label>Abattement disponible</label><div class="val" id="r-abatt">—</div></div>
+        <div class="res-card"><label>Base taxable</label><div class="val" id="r-base">—</div></div>
+        <div class="res-card"><label>Reçu net par le bénéficiaire</label><div class="val" id="r-net">—</div></div>
+      </div>
+    </div>
+
+    <div class="saving-box" id="saving-box" style="display:none;">
+      <h3>Vous pouvez transmettre sans droits</h3>
+      <div class="saving-amount" id="saving-amount">0 €</div>
+      <p id="saving-desc" style="opacity:.85;font-size:.9rem;margin-top:6px;"></p>
+    </div>
+
+    <div class="ad-wrap">
+      <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6482998719757329" data-ad-slot="5555555555" data-ad-format="auto" data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <h3 class="section-title" style="margin-top:8px;">Stratégie sur plusieurs cycles (15 ans)</h3>
+    <p class="section-sub">L'abattement se renouvelle tous les 15 ans — voici votre potentiel de transmission</p>
+    <div class="cycle-grid" id="cycle-grid"></div>
+
+    <div class="info-box" style="margin-top:24px;">
+      <strong>Don Sarkozy (don familial de sommes d'argent) :</strong> si vous avez moins de 80 ans, vous pouvez donner <strong>31 865 € supplémentaires</strong> en numéraire, exonérés de droits, en plus de l'abattement principal. Ce plafond se renouvelle aussi tous les 15 ans.
+    </div>
+
+    <div style="background:linear-gradient(135deg,#1a3a5c,#2c5f8a);border-radius:12px;padding:24px;margin:24px 0;color:#fff;text-align:center;">
+      <div style="font-size:1.2rem;font-weight:800;margin-bottom:8px;">Optimisez votre donation avec un expert</div>
+      <p style="opacity:.85;margin-bottom:16px;font-size:.9rem;">Un CGP vous aide à choisir entre donation simple, démembrement, SCI... et maximise ce que reçoivent vos proches.</p>
+      <a href="comparateur.html" style="background:#e67e22;color:#fff;padding:12px 24px;border-radius:8px;font-weight:700;text-decoration:none;display:inline-block;">Trouver un conseiller gratuit →</a>
+    </div>
+
+  </section>
+
+</div>
+
+<div style="background:var(--light);padding:40px 0;margin-top:8px;">
+  <div class="container">
+    <h2 class="section-title">Questions fréquentes sur la donation de son vivant</h2>
+    <div style="margin-top:20px;">
+      <div style="border-bottom:1px solid var(--border);padding:16px 0;"><strong style="color:var(--primary);">Quelle est la différence entre donation et succession ?</strong><p style="margin-top:8px;color:#555;font-size:.93rem;">La donation est une transmission de votre vivant, la succession intervient à votre décès. La donation permet d'utiliser les abattements de votre vivant et de les renouveler tous les 15 ans, ce qui n'est pas possible en succession.</p></div>
+      <div style="border-bottom:1px solid var(--border);padding:16px 0;"><strong style="color:var(--primary);">Faut-il un notaire pour une donation ?</strong><p style="margin-top:8px;color:#555;font-size:.93rem;">Oui, pour les biens immobiliers ou les sommes importantes (> 100 000 €), un acte notarié est obligatoire. Pour les dons manuels de sommes d'argent modestes, un simple écrit peut suffire mais le notaire est recommandé.</p></div>
+      <div style="padding:16px 0;"><strong style="color:var(--primary);">Peut-on récupérer un bien après une donation ?</strong><p style="margin-top:8px;color:#555;font-size:.93rem;">En principe non, une donation est irrévocable. Des exceptions existent : ingratitude du donataire, survenance d'enfant si prévu dans l'acte. D'où l'importance de bien réfléchir avant avec un professionnel.</p></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p><strong>SimulateurSuccession.fr</strong> — Outil gratuit d'estimation</p>
+  <p style="margin-top:8px;"><a href="./">Succession</a> · <a href="donation.html">Donation</a> · <a href="assurance-vie.html">Assurance-vie</a> · <a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a></p>
+</footer>
+
+<script>
+const AB = {enfant:100000,petit_enfant:1594,frere_soeur:15932,neveu_niece:7967,autre:1594};
+const BAR = {
+  enfant:     [{m:8072,t:.05},{m:12109,t:.10},{m:15932,t:.15},{m:552324,t:.20},{m:902838,t:.30},{m:1805677,t:.35},{m:1e15,t:.45}],
+  petit_enfant:[{m:8072,t:.05},{m:12109,t:.10},{m:15932,t:.15},{m:552324,t:.20},{m:902838,t:.30},{m:1805677,t:.35},{m:1e15,t:.45}],
+  frere_soeur:[{m:24430,t:.35},{m:1e15,t:.45}],
+  neveu_niece:[{m:1e15,t:.55}],
+  autre:      [{m:1e15,t:.60}],
+};
+function droits(base,lien){if(base<=0)return 0;const b=BAR[lien]||BAR.autre;let d=0,p=0;for(const t of b){if(base<=0)break;const s=Math.min(base,t.m-p);d+=s*t.t;base-=s;p=t.m;}return Math.round(d);}
+function euro(n){return new Intl.NumberFormat('fr-FR',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);}
+function calc(){
+  const montant=+document.getElementById('montant').value||0;
+  const lien=document.getElementById('lien').value;
+  const age=+document.getElementById('age').value||60;
+  const ant=+document.getElementById('ant').value||0;
+  const horizon=+document.getElementById('horizon').value||20;
+  const abattBase=AB[lien]||AB.autre;
+  const abattDispo=Math.max(0,abattBase-ant);
+  const donSarkozy=age<80&&lien==='enfant'?31865:0;
+  const totalSansImpot=abattDispo+donSarkozy;
+  const base=Math.max(0,montant-totalSansImpot);
+  const d=droits(base,lien);
+  const net=montant-d;
+  document.getElementById('r-droits').textContent=euro(d);
+  document.getElementById('r-montant').textContent=euro(montant);
+  document.getElementById('r-abatt').textContent=euro(Math.min(abattDispo+donSarkozy,montant));
+  document.getElementById('r-base').textContent=euro(base);
+  document.getElementById('r-net').textContent=euro(net);
+  if(totalSansImpot>0){
+    document.getElementById('saving-box').style.display='block';
+    document.getElementById('saving-amount').textContent=euro(Math.min(totalSansImpot,montant));
+    document.getElementById('saving-desc').textContent=`dont ${euro(abattDispo)} d'abattement${donSarkozy>0?' + '+euro(donSarkozy)+' de don Sarkozy':''} transmissibles sans aucun impôt`;
+  }
+  // Cycles
+  const nbCycles=Math.floor(horizon/15)+1;
+  let html='';
+  for(let i=0;i<Math.min(nbCycles,3);i++){
+    const annee=2026+i*15;
+    const cumulSansImpot=(i+1)*(abattBase+donSarkozy);
+    html+=`<div class="cycle-card"><div class="cycle-year">${annee}</div><div class="cycle-label">Cycle ${i+1}</div><div class="cycle-val">${euro(cumulSansImpot)}</div><div style="font-size:.78rem;color:#666;margin-top:4px;">transmis sans impôt (cumulé)</div></div>`;
+  }
+  document.getElementById('cycle-grid').innerHTML=html;
+  document.getElementById('results').style.display='block';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+</body>
+</html>
