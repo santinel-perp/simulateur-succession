@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur Droits de Succession 2026 — Calcul Gratuit + Stratégies d'Optimisation</title>
+    <meta name="description" content="Le seul simulateur de succession qui calcule vos droits ET vous propose automatiquement les meilleures stratégies pour économiser légalement. Abattements 2026, démembrement, assurance-vie. Gratuit, sans inscription.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="simulateur succession, calcul droits de succession 2026, abattement succession enfant, optimisation succession, démembrement propriété, assurance vie succession, pacte dutreil, SCI familiale, donation 15 ans">
+    <link rel="canonical" href="https://simulateur-succession.fr/">
+    <meta property="og:title" content="Simulateur Droits de Succession 2026 — Gratuit">
+    <meta property="og:description" content="Calculez vos droits de succession et découvrez combien vous pouvez économiser légalement. Résultats en 2 minutes.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- ===== REMPLACEZ ca-pub-XXXXXXXXXXXXXXXXX par votre ID Adsense ===== -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Simulateur Droits de Succession 2026",
+      "url": "https://simulateur-succession.fr/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "description": "Calculez vos droits de succession 2026 et optimisez la transmission de votre patrimoine avec les stratégies adaptées à votre situation.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "inLanguage": "fr"
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #1a3a5c;
+            --accent:  #e67e22;
+            --green:   #27ae60;
+            --red:     #e74c3c;
+            --light:   #f7f9fc;
+            --dark:    #2c3e50;
+            --border:  #dde3eb;
+            --radius:  12px;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: var(--dark); background: #fff; line-height: 1.6; }
+
+        /* HEADER */
+        header { background: linear-gradient(135deg, #1a3a5c 0%, #2c5f8a 100%); color: #fff; padding: 44px 20px 36px; text-align: center; }
+        header h1 { font-size: clamp(1.5rem, 4vw, 2.6rem); font-weight: 800; margin-bottom: 14px; }
+        header p  { font-size: 1.05rem; opacity: .9; max-width: 620px; margin: 0 auto 22px; }
+        .badge-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .badge { background: rgba(255,255,255,.13); border: 1px solid rgba(255,255,255,.25); border-radius: 20px; padding: 5px 14px; font-size: .82rem; }
+
+        /* LAYOUT */
+        .container { max-width: 920px; margin: 0 auto; padding: 0 20px; }
+        section { padding: 36px 0; border-bottom: 1px solid var(--border); }
+        .section-title { font-size: 1.35rem; font-weight: 700; color: var(--primary); margin-bottom: 6px; }
+        .section-sub   { color: #666; margin-bottom: 22px; font-size: .95rem; }
+
+        /* ADSENSE SLOTS */
+        .ad-wrap { margin: 24px 0; text-align: center; min-height: 90px; }
+
+        /* FORM */
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        @media (max-width: 580px) { .form-grid { grid-template-columns: 1fr; } }
+        .form-group { display: flex; flex-direction: column; gap: 6px; }
+        .form-group.full { grid-column: 1 / -1; }
+        label { font-weight: 600; font-size: .88rem; }
+        .hint { font-weight: 400; color: #888; font-size: .78rem; }
+        input[type="number"], input[type="text"], select {
+            padding: 11px 14px; border: 2px solid var(--border); border-radius: 8px;
+            font-size: 1rem; background: #fff; transition: border-color .2s;
+        }
+        input:focus, select:focus { outline: none; border-color: var(--primary); }
+        input[type="range"] { width: 100%; cursor: pointer; accent-color: var(--primary); }
+        .range-val { font-weight: 700; color: var(--primary); }
+
+        /* HEIR CARDS */
+        .heir-card { background: var(--light); border: 2px solid var(--border); border-radius: var(--radius); padding: 16px; margin-bottom: 12px; }
+        .heir-card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+        .heir-num { font-weight: 700; color: var(--primary); }
+        .btn-remove { background: none; border: none; color: var(--red); cursor: pointer; font-size: 1.2rem; padding: 2px 8px; border-radius: 4px; }
+        .btn-remove:hover { background: #fde8e8; }
+
+        /* BUTTONS */
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; border-radius: 8px; border: none; cursor: pointer; font-size: 1rem; font-weight: 600; transition: all .2s; }
+        .btn-primary { background: var(--primary); color: #fff; width: 100%; font-size: 1.1rem; padding: 16px; margin-top: 24px; }
+        .btn-primary:hover { background: #1e4976; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(26,58,92,.25); }
+        .btn-outline { background: #fff; color: var(--primary); border: 2px solid var(--primary); }
+        .btn-outline:hover { background: var(--light); }
+        .btn-add { background: #eaf0f9; color: var(--primary); border: 2px dashed var(--primary); width: 100%; margin-top: 4px; }
+        .btn-add:hover { background: #d4e3f5; }
+
+        /* RESULTS */
+        #results { display: none; }
+        .results-hero { background: linear-gradient(135deg, #1a3a5c, #2c5f8a); color: #fff; border-radius: var(--radius); padding: 32px; margin-bottom: 22px; }
+        .results-hero h2 { font-size: 1rem; opacity: .75; margin-bottom: 6px; }
+        .big-num { font-size: clamp(2rem, 6vw, 3.6rem); font-weight: 900; margin-bottom: 10px; }
+        .big-num.red   { color: #ff7b7b; }
+        .big-num.green { color: #5ced8c; }
+        .results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 20px; }
+        @media (max-width: 480px) { .results-grid { grid-template-columns: 1fr; } }
+        .res-card { background: rgba(255,255,255,.1); border-radius: 8px; padding: 14px; }
+        .res-card label { font-size: .78rem; opacity: .7; color: #fff; display: block; margin-bottom: 4px; }
+        .res-card .val { font-size: 1.3rem; font-weight: 700; color: #fff; }
+
+        /* SAVINGS */
+        .savings-box { background: linear-gradient(135deg, #155e32, #27ae60); color: #fff; border-radius: var(--radius); padding: 26px; margin-bottom: 22px; display: none; }
+        .savings-box h3 { font-size: .95rem; opacity: .85; margin-bottom: 6px; }
+        .savings-amount { font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; margin-bottom: 6px; }
+        .savings-box p { opacity: .85; font-size: .9rem; }
+
+        /* TABLE */
+        .table-wrap { overflow-x: auto; margin-top: 14px; }
+        .heir-table { width: 100%; border-collapse: collapse; }
+        .heir-table th { background: var(--light); padding: 11px 14px; text-align: left; font-size: .82rem; color: #555; border-bottom: 2px solid var(--border); white-space: nowrap; }
+        .heir-table td { padding: 13px 14px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+        .heir-table tr:last-child td { border-bottom: none; }
+        .heir-table tr:hover td { background: var(--light); }
+        .taux-badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: .78rem; font-weight: 700; }
+        .t-low  { background: #d1fae5; color: #065f46; }
+        .t-mid  { background: #fef3c7; color: #92400e; }
+        .t-high { background: #fee2e2; color: #991b1b; }
+
+        /* STRATEGY CARDS */
+        .strategy-list { display: flex; flex-direction: column; gap: 14px; margin-top: 16px; }
+        .strategy-card { border: 2px solid var(--border); border-radius: var(--radius); padding: 20px 20px 18px 24px; position: relative; overflow: hidden; }
+        .strategy-card::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background: var(--accent); }
+        .strategy-card.top::before { background: var(--green); }
+        .strategy-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+        .strategy-title { font-weight: 700; font-size: .98rem; }
+        .strategy-saving { background: #d1fae5; color: #065f46; font-weight: 700; font-size: .85rem; padding: 4px 12px; border-radius: 16px; white-space: nowrap; flex-shrink: 0; }
+        .strategy-desc { color: #555; font-size: .88rem; line-height: 1.55; }
+        .top-label { position:absolute; top:10px; right:10px; background: var(--green); color:#fff; font-size:.68rem; font-weight:700; padding:2px 8px; border-radius:4px; text-transform:uppercase; letter-spacing:.5px; }
+
+        /* DÉMEMBREMENT */
+        .dem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+        @media (max-width: 480px) { .dem-grid { grid-template-columns: 1fr; } }
+        .dem-box { border-radius: var(--radius); padding: 22px; text-align: center; }
+        .dem-box.usu  { background: #fef3c7; }
+        .dem-box.nue  { background: #dbeafe; }
+        .dem-pct  { font-size: 2.4rem; font-weight: 900; margin-bottom: 4px; }
+        .dem-lab  { font-size: .82rem; color: #555; margin-bottom: 10px; }
+        .dem-val  { font-size: 1.2rem; font-weight: 700; }
+        .dem-sub  { font-size: .78rem; color: #666; margin-top: 6px; }
+        .highlight { background: var(--light); border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 0 8px 8px 0; margin-top: 16px; font-size: .9rem; line-height: 1.6; }
+
+        /* PROGRESS */
+        .prog-wrap { margin-top: 6px; }
+        .prog-bar { height: 6px; background: rgba(255,255,255,.2); border-radius: 3px; overflow: hidden; }
+        .prog-fill { height: 100%; background: linear-gradient(90deg, #5ced8c, #f6c90e, #ff7b7b); border-radius: 3px; transition: width .6s ease; }
+
+        /* FAQ */
+        .faq-item { border-bottom: 1px solid var(--border); }
+        .faq-q { font-weight: 700; font-size: .97rem; color: var(--primary); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 0; }
+        .faq-q::after { content: '+'; font-size: 1.4rem; flex-shrink: 0; transition: transform .2s; color: var(--accent); }
+        .faq-item.open .faq-q::after { transform: rotate(45deg); }
+        .faq-a { display: none; padding: 0 0 18px; color: #444; line-height: 1.75; font-size: .93rem; }
+        .faq-item.open .faq-a { display: block; }
+
+        /* DISCLAIMER */
+        .disclaimer { background: #fffbeb; border: 1px solid #f59e0b; border-radius: 8px; padding: 14px 18px; font-size: .84rem; color: #92400e; margin: 22px 0; }
+
+        /* PRINT */
+        @media print {
+            header .badge-row, #form-section, .ad-wrap, .btn, footer { display: none !important; }
+            #results { display: block !important; }
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:none; } }
+        .anim { animation: fadeUp .4s ease both; }
+
+        /* FOOTER */
+        footer { background: var(--light); padding: 38px 20px; text-align: center; color: #888; font-size: .85rem; border-top: 1px solid var(--border); }
+        footer p { margin-bottom: 6px; }
+        footer strong { color: var(--dark); }
+
+        /* PARTS WARNING */
+        .parts-warn { font-size: .8rem; margin-top: 4px; font-weight: 600; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>Simulateur de Succession 2026</h1>
+        <p>Calculez vos droits de succession <strong>gratuitement</strong> et découvrez les stratégies pour <strong>économiser des milliers d'euros</strong> légalement</p>
+        <div class="badge-row">
+            <span class="badge">✓ Barème 2026 officiel</span>
+            <span class="badge">✓ Gratuit & sans inscription</span>
+            <span class="badge">✓ Stratégies d'optimisation incluses</span>
+            <span class="badge">✓ Export PDF</span>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+
+    <!-- AD SLOT 1 — haut de page -->
+    <div class="ad-wrap">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+             data-ad-slot="1111111111"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <!-- ==================== FORMULAIRE ==================== -->
+    <section id="form-section">
+
+        <!-- STEP 1 -->
+        <div class="section-title">1. Votre patrimoine</div>
+        <p class="section-sub">Estimez la valeur totale des biens transmissibles (immobilier, épargne, mobilier de valeur)</p>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Patrimoine brut total <span class="hint">(€)</span></label>
+                <input type="number" id="patrimoine" value="350000" min="0" step="5000">
+            </div>
+            <div class="form-group">
+                <label>Dettes / passif déductible <span class="hint">(€)</span></label>
+                <input type="number" id="dettes" value="0" min="0" step="1000">
+            </div>
+            <div class="form-group">
+                <label>Assurance-vie déjà souscrite <span class="hint">(€ — hors succession)</span></label>
+                <input type="number" id="assurance_vie" value="0" min="0" step="5000">
+            </div>
+            <div class="form-group">
+                <label>Donations antérieures &lt; 15 ans <span class="hint">(€ — déduites des abattements)</span></label>
+                <input type="number" id="donations_ant" value="0" min="0" step="5000">
+            </div>
+            <div class="form-group">
+                <label>Âge du donateur / défunt <span class="hint">(pour démembrement)</span></label>
+                <input type="number" id="age" value="65" min="18" max="99">
+            </div>
+            <div class="form-group">
+                <label>Situation conjugale</label>
+                <select id="conjoint">
+                    <option value="non">Célibataire / Divorcé(e)</option>
+                    <option value="oui" selected>Marié(e) ou Pacsé(e)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="section-title" style="margin-top:32px;">2. Vos héritiers</div>
+        <p class="section-sub">Ajoutez chaque héritier pour calculer les droits précis</p>
+
+        <div id="heirs-wrap"></div>
+        <button class="btn btn-add" onclick="addHeir()">+ Ajouter un héritier</button>
+
+        <!-- STEP 3 -->
+        <div class="section-title" style="margin-top:32px;">3. Stratégie à simuler</div>
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Scénario</label>
+                <select id="strategie">
+                    <option value="brut">Succession brute (aucune optimisation)</option>
+                    <option value="donation">Donation de votre vivant</option>
+                    <option value="demembrement">Démembrement de propriété</option>
+                    <option value="av">Optimisation assurance-vie</option>
+                    <option value="combinee">Stratégie combinée (maximum d'économies)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Horizon de planification <span class="hint">(années)</span></label>
+                <input type="number" id="horizon" value="15" min="1" max="30">
+            </div>
+        </div>
+
+        <button class="btn btn-primary" onclick="calculate()">Calculer mes droits de succession →</button>
+
+    </section>
+
+    <!-- ==================== RÉSULTATS ==================== -->
+    <section id="results">
+
+        <!-- AD SLOT 2 — milieu résultats -->
+        <div class="ad-wrap">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+                 data-ad-slot="2222222222"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <!-- HERO RÉSULTATS -->
+        <div class="results-hero anim">
+            <h2>Droits de succession estimés</h2>
+            <div class="big-num red" id="r-total">—</div>
+            <div class="results-grid">
+                <div class="res-card">
+                    <label>Actif net transmis</label>
+                    <div class="val" id="r-actif">—</div>
+                </div>
+                <div class="res-card">
+                    <label>Taux effectif global</label>
+                    <div class="val" id="r-taux">—</div>
+                </div>
+                <div class="res-card">
+                    <label>Net reçu par héritier (moy.)</label>
+                    <div class="val" id="r-net-moyen">—</div>
+                </div>
+                <div class="res-card">
+                    <label>Pression fiscale</label>
+                    <div class="val" id="r-pression">—</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ÉCONOMIES POTENTIELLES -->
+        <div class="savings-box anim" id="savings-box">
+            <h3>Vous pouvez économiser légalement</h3>
+            <div class="savings-amount" id="savings-amount">0 €</div>
+            <p id="savings-desc">en appliquant les stratégies ci-dessous</p>
+        </div>
+
+        <!-- TABLEAU HÉRITIERS -->
+        <h3 class="section-title">Répartition par héritier</h3>
+        <div class="table-wrap">
+            <table class="heir-table">
+                <thead>
+                    <tr>
+                        <th>Héritier</th>
+                        <th>Lien</th>
+                        <th>Part brute</th>
+                        <th>Abattement</th>
+                        <th>Base taxable</th>
+                        <th>Droits à payer</th>
+                        <th>Taux effectif</th>
+                    </tr>
+                </thead>
+                <tbody id="heir-tbody"></tbody>
+            </table>
+        </div>
+
+        <!-- DÉMEMBREMENT -->
+        <div id="dem-section" style="display:none; margin-top:32px;">
+            <h3 class="section-title">Démembrement de propriété</h3>
+            <p class="section-sub">Barème fiscal officiel selon l'âge de l'usufruitier</p>
+            <div class="dem-grid" id="dem-grid"></div>
+            <div class="highlight">
+                <strong>Comment fonctionne le démembrement :</strong> En donnant la <em>nue-propriété</em> à vos héritiers maintenant, vous conservez l'usage du bien (usufruit). Les droits de donation ne portent que sur la valeur de la nue-propriété. À votre décès, la pleine propriété est reconstituée <strong>sans droits supplémentaires</strong>.
+            </div>
+        </div>
+
+        <!-- STRATÉGIES -->
+        <div style="margin-top:32px;">
+            <h3 class="section-title">Stratégies d'optimisation — classées par économies</h3>
+            <p class="section-sub">Propres à votre situation, fonctionnalité introuvable ailleurs</p>
+            <div class="strategy-list" id="strategy-list"></div>
+        </div>
+
+        <!-- AD SLOT 3 — bas résultats -->
+        <div class="ad-wrap" style="margin-top:32px;">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+                 data-ad-slot="3333333333"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <div class="disclaimer">⚠️ <strong>Avertissement :</strong> Ce simulateur fournit une estimation indicative basée sur le barème 2026. Les droits réels dépendent du régime matrimonial, des clauses testamentaires, de la nature des biens, etc. Consultez un notaire ou un conseiller en gestion de patrimoine pour un conseil personnalisé.</div>
+
+        <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:24px;">
+            <button class="btn btn-outline" onclick="window.print()">🖨️ Imprimer / Exporter PDF</button>
+            <button class="btn btn-outline" onclick="resetSim()">↺ Nouvelle simulation</button>
+        </div>
+
+    </section>
+
+</div><!-- /container -->
+
+<!-- ==================== FAQ ==================== -->
+<div style="background:var(--light); padding:48px 0; margin-top:8px;">
+    <div class="container">
+        <h2 class="section-title">Questions fréquentes sur la succession en France (2026)</h2>
+        <p class="section-sub">Réponses expertes, mises à jour pour 2026</p>
+        <div id="faq-container"></div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p><strong>Simulateur Succession 2026</strong> — Outil gratuit d'estimation patrimoniale</p>
+        <p>Barème et abattements à jour — Sources : Direction Générale des Finances Publiques</p>
+        <p style="margin-top:14px;">Cet outil est informatif et ne remplace pas un conseil juridique ou fiscal professionnel.</p>
+        <p style="margin-top:12px;">
+            <a href="/mentions-legales.html" style="color:#888; margin:0 8px;">Mentions légales</a> —
+            <a href="/confidentialite.html"  style="color:#888; margin:0 8px;">Politique de confidentialité</a>
+        </p>
+    </div>
+</footer>
+
+<!-- SCHEMA FAQ injecté dynamiquement -->
+<script id="faq-ld" type="application/ld+json">{}</script>
+
+<script>
+// =====================================================================
+// DONNÉES FISCALES 2026
+// =====================================================================
+const ABATTEMENTS = {
+    enfant:       100000,
+    parent:       100000,
+    conjoint:     Infinity,
+    frere_soeur:  15932,
+    neveu_niece:  7967,
+    petit_enfant: 1594,
+    autre:        1594,
+};
+
+const LIEN_LABEL = {
+    enfant:       'Enfant / Parent',
+    parent:       'Parent',
+    conjoint:     'Conjoint / PACS',
+    frere_soeur:  'Frère ou Sœur',
+    neveu_niece:  'Neveu ou Nièce',
+    petit_enfant: 'Petit-enfant',
+    autre:        'Autre (non-parent)',
+};
+
+const BAREMES = {
+    enfant:      [{m:8072,t:.05},{m:12109,t:.10},{m:15932,t:.15},{m:552324,t:.20},{m:902838,t:.30},{m:1805677,t:.35},{m:1e15,t:.45}],
+    parent:      [{m:8072,t:.05},{m:12109,t:.10},{m:15932,t:.15},{m:552324,t:.20},{m:902838,t:.30},{m:1805677,t:.35},{m:1e15,t:.45}],
+    conjoint:    [{m:1e15,t:0}],
+    frere_soeur: [{m:24430,t:.35},{m:1e15,t:.45}],
+    neveu_niece: [{m:1e15,t:.55}],
+    petit_enfant:[{m:8072,t:.05},{m:12109,t:.10},{m:15932,t:.15},{m:552324,t:.20},{m:902838,t:.30},{m:1805677,t:.35},{m:1e15,t:.45}],
+    autre:       [{m:1e15,t:.60}],
+};
+
+const USUFRUIT = [
+    {max:20,u:.90},{max:30,u:.80},{max:40,u:.70},{max:50,u:.60},
+    {max:60,u:.50},{max:70,u:.40},{max:80,u:.30},{max:90,u:.20},{max:999,u:.10},
+];
+
+// =====================================================================
+// STATE
+// =====================================================================
+let heirs = [{ id:1, nom:'Enfant 1', lien:'enfant', part:100 }];
+let uid = 2;
+
+function renderHeirs() {
+    const wrap = document.getElementById('heirs-wrap');
+    if (!heirs.length) { wrap.innerHTML = '<p style="color:#888;padding:16px;text-align:center;">Aucun héritier</p>'; return; }
+    const total = heirs.reduce((s,h) => s + +h.part, 0);
+    const ok = Math.abs(total - 100) <= 1;
+    wrap.innerHTML = heirs.map((h, i) => `
+        <div class="heir-card">
+            <div class="heir-card-head">
+                <span class="heir-num">Héritier ${i+1}</span>
+                <button class="btn-remove" onclick="removeHeir(${h.id})" title="Supprimer">✕</button>
+            </div>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Prénom / Identifiant</label>
+                    <input type="text" value="${h.nom}" onchange="updHeir(${h.id},'nom',this.value)" placeholder="Ex : Marie">
+                </div>
+                <div class="form-group">
+                    <label>Lien de parenté</label>
+                    <select onchange="updHeir(${h.id},'lien',this.value)">
+                        ${Object.keys(LIEN_LABEL).map(k=>`<option value="${k}"${k===h.lien?' selected':''}>${LIEN_LABEL[k]}</option>`).join('')}
+                    </select>
+                </div>
+                <div class="form-group full">
+                    <label>Part héritée : <span class="range-val">${h.part}%</span></label>
+                    <input type="range" min="1" max="100" value="${h.part}"
+                        oninput="this.previousElementSibling.querySelector('.range-val').textContent=this.value+'%'; updHeir(${h.id},'part',+this.value)">
+                    <div class="parts-warn" style="color:${ok?'#065f46':'#991b1b'}">
+                        Total des parts : ${total}% ${ok ? '✓' : '⚠️ doit être égal à 100%'}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+function addHeir() {
+    const n = heirs.length + 1;
+    const even = Math.floor(100 / n);
+    heirs.push({ id: uid++, nom: `Héritier ${n}`, lien: 'enfant', part: even });
+    heirs.forEach((h, i) => h.part = i === n - 1 ? 100 - even * (n - 1) : even);
+    renderHeirs();
+}
+
+function removeHeir(id) {
+    heirs = heirs.filter(h => h.id !== id);
+    renderHeirs();
+}
+
+function updHeir(id, key, val) {
+    const h = heirs.find(h => h.id === id);
+    if (h) { h[key] = val; if (key === 'part') renderHeirs(); }
+}
+
+// =====================================================================
+// CALCUL ENGINE
+// =====================================================================
+function droitsSur(base, lien) {
+    if (base <= 0) return 0;
+    const b = BAREMES[lien] || BAREMES.autre;
+    let d = 0, prev = 0;
+    for (const tr of b) {
+        if (base <= 0) break;
+        const slice = Math.min(base, tr.m - prev);
+        d += slice * tr.t;
+        base -= slice;
+        prev = tr.m;
+    }
+    return Math.round(d);
+}
+
+function usufPct(age) {
+    for (const r of USUFRUIT) if (age <= r.max) return r.u;
+    return 0.10;
+}
+
+function euro(n) {
+    return new Intl.NumberFormat('fr-FR', { style:'currency', currency:'EUR', maximumFractionDigits:0 }).format(n);
+}
+function pct(n) { return (n * 100).toFixed(1) + '%'; }
+
+// =====================================================================
+// CALCULATE
+// =====================================================================
+function calculate() {
+    const patrimoine = +document.getElementById('patrimoine').value || 0;
+    const dettes     = +document.getElementById('dettes').value     || 0;
+    const av         = +document.getElementById('assurance_vie').value || 0;
+    const donAnt     = +document.getElementById('donations_ant').value || 0;
+    const age        = +document.getElementById('age').value         || 65;
+    const horizon    = +document.getElementById('horizon').value     || 15;
+    const strategie  = document.getElementById('strategie').value;
+
+    const total = heirs.reduce((s, h) => s + +h.part, 0);
+    if (Math.abs(total - 100) > 1) {
+        alert(`La somme des parts est ${total}%. Elle doit être égale à 100%.`);
+        return;
+    }
+
+    const actifNet = Math.max(0, patrimoine - dettes - av);
+
+    // Calcul par héritier
+    let totalDroits = 0;
+    const rows = heirs.map(h => {
+        const partBrute = actifNet * h.part / 100;
+        const nbPayants = heirs.filter(x => x.lien !== 'conjoint').length || 1;
+        const donAntPart = h.lien !== 'conjoint' ? donAnt / nbPayants : 0;
+        const abatt      = h.lien === 'conjoint'
+            ? partBrute
+            : Math.max(0, Math.min(ABATTEMENTS[h.lien] || ABATTEMENTS.autre, partBrute) - donAntPart);
+        const base  = Math.max(0, partBrute - abatt);
+        const droits = h.lien === 'conjoint' ? 0 : droitsSur(base, h.lien);
+        const tauxEff = partBrute > 0 ? droits / partBrute : 0;
+        totalDroits += droits;
+        return { ...h, partBrute, abatt, base, droits, tauxEff };
+    });
+
+    const tauxGlobal = actifNet > 0 ? totalDroits / actifNet : 0;
+    const payants = rows.filter(r => r.lien !== 'conjoint');
+    const moyenNet = payants.length > 0
+        ? payants.reduce((s, r) => s + r.partBrute - r.droits, 0) / payants.length
+        : actifNet;
+
+    // Affichage résultats hero
+    document.getElementById('r-total').textContent = euro(totalDroits);
+    document.getElementById('r-actif').textContent = euro(actifNet);
+    document.getElementById('r-taux').textContent  = pct(tauxGlobal);
+    document.getElementById('r-net-moyen').textContent = euro(moyenNet);
+    const p = Math.min(100, Math.round(tauxGlobal * 100));
+    document.getElementById('r-pression').innerHTML = `
+        <div style="font-size:1.2rem;font-weight:800;color:${p<10?'#5ced8c':p<25?'#f6c90e':'#ff7b7b'}">${p}%</div>
+        <div class="prog-wrap"><div class="prog-bar"><div class="prog-fill" style="width:${p}%"></div></div></div>`;
+
+    // Tableau
+    document.getElementById('heir-tbody').innerHTML = rows.map(r => {
+        const t = Math.round(r.tauxEff * 100);
+        const tc = t < 10 ? 't-low' : t < 25 ? 't-mid' : 't-high';
+        if (r.lien === 'conjoint') return `
+            <tr>
+                <td><strong>${r.nom}</strong></td>
+                <td>${LIEN_LABEL[r.lien]}</td>
+                <td>${euro(r.partBrute)}</td>
+                <td colspan="2" style="color:#065f46;font-weight:600;">Exonéré(e) totalement</td>
+                <td style="font-weight:700;color:#065f46;">0 €</td>
+                <td><span class="taux-badge t-low">0%</span></td>
+            </tr>`;
+        return `
+            <tr>
+                <td><strong>${r.nom}</strong></td>
+                <td>${LIEN_LABEL[r.lien]}</td>
+                <td>${euro(r.partBrute)}</td>
+                <td>${euro(r.abatt)}</td>
+                <td>${euro(r.base)}</td>
+                <td style="font-weight:700;color:${r.droits>0?'#991b1b':'#065f46'}">${euro(r.droits)}</td>
+                <td><span class="taux-badge ${tc}">${t}%</span></td>
+            </tr>`;
+    }).join('');
+
+    // Démembrement
+    const uPct = usufPct(age);
+    const nPct = 1 - uPct;
+    if (strategie === 'demembrement' || strategie === 'combinee') {
+        document.getElementById('dem-section').style.display = 'block';
+        document.getElementById('dem-grid').innerHTML = `
+            <div class="dem-box usu">
+                <div class="dem-pct">${Math.round(uPct*100)}%</div>
+                <div class="dem-lab">Usufruit conservé par le donateur</div>
+                <div class="dem-val">${euro(actifNet * uPct)}</div>
+                <div class="dem-sub">Non taxé à votre décès</div>
+            </div>
+            <div class="dem-box nue">
+                <div class="dem-pct">${Math.round(nPct*100)}%</div>
+                <div class="dem-lab">Nue-propriété à transmettre</div>
+                <div class="dem-val">${euro(actifNet * nPct)}</div>
+                <div class="dem-sub">Seule base taxable pour la donation</div>
+            </div>`;
+    } else {
+        document.getElementById('dem-section').style.display = 'none';
+    }
+
+    // Stratégies
+    const strats = buildStrategies(actifNet, rows, age, av, donAnt, totalDroits, horizon, uPct, nPct);
+    renderStrategies(strats, totalDroits);
+
+    document.getElementById('results').style.display = 'block';
+    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// =====================================================================
+// STRATÉGIES
+// =====================================================================
+function buildStrategies(actifNet, rows, age, avActuelle, donAnt, totalDroits, horizon, uPct, nPct) {
+    const strats = [];
+    const nbCycles = Math.floor(horizon / 15);
+
+    // 1. DONATION TOUS LES 15 ANS
+    if (nbCycles >= 1) {
+        const eco = rows.filter(r => r.lien !== 'conjoint').reduce((s, r) => {
+            const abatt = ABATTEMENTS[r.lien] || ABATTEMENTS.autre;
+            const ecoH = droitsSur(Math.min(abatt, r.partBrute), r.lien);
+            return s + ecoH * nbCycles;
+        }, 0);
+        if (eco > 0) strats.push({
+            titre: 'Donation de votre vivant (abattement renouvelable tous les 15 ans)',
+            eco,
+            top: true,
+            desc: `Donnez jusqu'à <strong>100 000 € par enfant</strong> tous les 15 ans sans aucun droit. Sur ${horizon} an(s), l'abattement se renouvelle ${nbCycles} fois. Cumulé avec votre conjoint, c'est 200 000 € par enfant transmissibles sans impôt à chaque cycle.`,
+        });
+    }
+
+    // 2. DON DE SOMMES D'ARGENT (don Sarkozy)
+    const enfants = rows.filter(r => r.lien === 'enfant');
+    if (age < 80 && enfants.length > 0) {
+        const ecoSarkozy = enfants.reduce((s, r) => s + droitsSur(31865, r.lien), 0);
+        strats.push({
+            titre: 'Don familial de sommes d'argent : 31 865 € par enfant (donateur < 80 ans)',
+            eco: ecoSarkozy,
+            top: false,
+            desc: `En plus de l'abattement de 100 000 €, vous pouvez donner <strong>31 865 € en numéraire</strong> par enfant, exonéré de droits, si vous avez moins de 80 ans (renouvelable tous les 15 ans). Pour ${enfants.length} enfant(s) : ${euro(31865 * enfants.length)} transmissibles en plus sans aucun impôt.`,
+        });
+    }
+
+    // 3. OPTIMISATION ASSURANCE-VIE
+    const nbPayants = rows.filter(r => r.lien !== 'conjoint').length;
+    if (nbPayants > 0) {
+        const plafondAV = 152500 * nbPayants;
+        const avSupp = Math.max(0, plafondAV - avActuelle);
+        if (avSupp > 10000) {
+            const ecoAV = rows.filter(r => r.lien !== 'conjoint').reduce((s, r) => {
+                const gainBase = Math.min(avSupp / nbPayants, 152500);
+                return s + droitsSur(gainBase, r.lien);
+            }, 0);
+            if (ecoAV > 0) strats.push({
+                titre: 'Optimisation assurance-vie (152 500 € d'abattement par bénéficiaire)',
+                eco: ecoAV,
+                top: false,
+                desc: `Les primes versées <strong>avant 70 ans</strong> bénéficient d'un abattement de <strong>152 500 € par bénéficiaire désigné</strong>, complètement hors succession. Vous pourriez basculer ~${euro(avSupp)} supplémentaires en AV pour économiser ces droits. Au-delà, taux de 20% (vs jusqu'à 60% en succession).`,
+            });
+        }
+    }
+
+    // 4. DÉMEMBREMENT
+    if (age < 81) {
+        const actifDem = actifNet * nPct;
+        const droitsAvecDem = rows.filter(r => r.lien !== 'conjoint').reduce((s, r) => {
+            const partNue = actifDem * r.part / 100;
+            const abatt = ABATTEMENTS[r.lien] || ABATTEMENTS.autre;
+            return s + droitsSur(Math.max(0, partNue - abatt), r.lien);
+        }, 0);
+        const ecoDem = Math.max(0, totalDroits - droitsAvecDem);
+        if (ecoDem > 500) strats.push({
+            titre: `Démembrement de propriété (base réduite à ${Math.round(nPct*100)}% à votre âge)`,
+            eco: ecoDem,
+            top: false,
+            desc: `À ${age} ans, la nue-propriété vaut fiscalement <strong>${Math.round(nPct*100)}%</strong> de la valeur du bien. En la donnant maintenant, vos droits de donation portent sur ${euro(actifNet * nPct)} au lieu de ${euro(actifNet)}. À votre décès, la pleine propriété est reconstituée <strong>sans droits supplémentaires</strong>.`,
+        });
+    }
+
+    // 5. SCI FAMILIALE (décote illiquidité)
+    if (actifNet > 250000 && enfants.length >= 1) {
+        const decote = 0.17;
+        const baseReduite = actifNet * (1 - decote);
+        const droitsSCI = rows.filter(r => r.lien !== 'conjoint').reduce((s, r) => {
+            const partSCI = baseReduite * r.part / 100;
+            const abatt = ABATTEMENTS[r.lien] || ABATTEMENTS.autre;
+            return s + droitsSur(Math.max(0, partSCI - abatt), r.lien);
+        }, 0);
+        const ecoSCI = Math.max(0, totalDroits - droitsSCI);
+        if (ecoSCI > 1000) strats.push({
+            titre: 'SCI familiale avec décote d'illiquidité (~15-20% reconnue fiscalement)',
+            eco: ecoSCI,
+            top: false,
+            desc: `En logeant vos biens immobiliers dans une SCI et en transmettant progressivement des parts, vous bénéficiez d'une <strong>décote d'illiquidité de 15-20%</strong> reconnue par l'administration fiscale. Cela réduit la base taxable d'environ ${euro(actifNet * decote)}. Nécessite un notaire (coût ~2-3 000 €, rentable à partir de 250 000 €).`,
+        });
+    }
+
+    // 6. PACTE DUTREIL
+    if (actifNet > 400000) strats.push({
+        titre: 'Pacte Dutreil — 75% d'abattement (si patrimoine professionnel ou société)',
+        eco: 0,
+        top: false,
+        desc: `Si votre patrimoine comprend une entreprise individuelle ou des parts de société, le Pacte Dutreil permet un <strong>abattement de 75% sur leur valeur</strong>. Sur ${euro(actifNet)} de parts pro, cela représente ${euro(actifNet * 0.75)} de base en moins. Les héritiers s'engagent à conserver les titres 4 ans. À évaluer avec un avocat fiscaliste ou un CGP.`,
+    });
+
+    // 7. ASSURANCE-VIE APRÈS 70 ANS
+    if (age >= 70) strats.push({
+        titre: 'Assurance-vie après 70 ans : les intérêts restent exonérés',
+        eco: 0,
+        top: false,
+        desc: `Même après 70 ans, les <strong>intérêts</strong> générés par une assurance-vie restent totalement exonérés de droits de succession (seules les primes versées entrent en succession, avec un abattement global de 30 500 €). Si votre AV est ancienne et performante, les plus-values accumulées peuvent être très significatives.`,
+    });
+
+    return strats.sort((a, b) => b.eco - a.eco);
+}
+
+function renderStrategies(strats, totalDroits) {
+    const totalEco = strats.reduce((s, st) => s + st.eco, 0);
+    if (totalEco > 0) {
+        const economieCap = Math.min(totalEco, totalDroits);
+        document.getElementById('savings-box').style.display = 'block';
+        document.getElementById('savings-amount').textContent = euro(economieCap);
+        document.getElementById('savings-desc').textContent =
+            `soit ${pct(totalDroits > 0 ? economieCap / totalDroits : 0)} de vos droits actuels, en appliquant ${strats.filter(s=>s.eco>0).length} stratégie(s) ci-dessous`;
+    } else {
+        document.getElementById('savings-box').style.display = 'none';
+    }
+
+    document.getElementById('strategy-list').innerHTML = strats.map((s, i) => `
+        <div class="strategy-card ${s.top ? 'top' : ''}">
+            ${s.top ? '<span class="top-label">⭐ Prioritaire</span>' : ''}
+            <div class="strategy-head">
+                <div class="strategy-title">${i+1}. ${s.titre}</div>
+                ${s.eco > 0 ? `<span class="strategy-saving">Économie : ${euro(s.eco)}</span>` : ''}
+            </div>
+            <p class="strategy-desc">${s.desc}</p>
+        </div>
+    `).join('');
+}
+
+function resetSim() {
+    document.getElementById('results').style.display = 'none';
+    window.scrollTo({ top:0, behavior:'smooth' });
+}
+
+// =====================================================================
+// FAQ
+// =====================================================================
+const FAQ = [
+    {
+        q: "Quels sont les abattements sur les droits de succession en 2026 ?",
+        a: "En 2026, les abattements sont : <strong>100 000 €</strong> par enfant (renouvelable tous les 15 ans) ; <strong>exonération totale</strong> pour le conjoint marié ou partenaire PACS ; <strong>15 932 €</strong> pour un frère ou une sœur ; <strong>7 967 €</strong> pour un neveu ou une nièce ; <strong>1 594 €</strong> pour les autres. Un don de somme d'argent supplémentaire de 31 865 € par bénéficiaire est possible si le donateur a moins de 80 ans.",
+    },
+    {
+        q: "Le conjoint survivant paie-t-il des droits de succession en France ?",
+        a: "Non. Depuis la loi TEPA de 2007, le conjoint marié et le partenaire pacsé sont totalement exonérés de droits de succession, quelle que soit la valeur des biens hérités.",
+    },
+    {
+        q: "Comment réduire légalement les droits de succession ?",
+        a: "Les principales stratégies : (1) <strong>Donation de votre vivant</strong> — 100 000 € par enfant tous les 15 ans sans droits. (2) <strong>Assurance-vie</strong> — 152 500 € par bénéficiaire hors succession (primes avant 70 ans). (3) <strong>Démembrement de propriété</strong> — donnez la nue-propriété maintenant, conservez l'usufruit. (4) <strong>SCI familiale</strong> avec décote d'illiquidité 15-20%. (5) <strong>Pacte Dutreil</strong> — 75% d'abattement pour les entreprises.",
+    },
+    {
+        q: "Qu'est-ce que le démembrement de propriété en succession ?",
+        a: "Le démembrement sépare l'usufruit (droit d'utiliser le bien) de la nue-propriété (droit de le posséder). En donnant la nue-propriété à vos héritiers de votre vivant, les droits ne sont calculés que sur sa valeur (par exemple 60% de la valeur totale à 60 ans). À votre décès, vos héritiers récupèrent la pleine propriété <strong>sans aucun droit supplémentaire</strong>.",
+    },
+    {
+        q: "L'assurance-vie est-elle soumise aux droits de succession ?",
+        a: "Elle est en grande partie hors succession. Pour les primes versées <strong>avant 70 ans</strong> : abattement de 152 500 € par bénéficiaire, puis 20% jusqu'à 700 000 €, puis 31,25%. Pour les primes versées <strong>après 70 ans</strong> : abattement global de 30 500 €, puis droits de succession normaux — mais les intérêts sont totalement exonérés.",
+    },
+    {
+        q: "Comment fonctionne la donation tous les 15 ans ?",
+        a: "Les abattements se renouvellent tous les 15 ans. Un parent peut donner 100 000 € à chaque enfant sans droits, puis recommencer 15 ans plus tard. Couplé avec votre conjoint, cela représente 200 000 € par enfant par cycle, totalement exonérés. Sur 30 ans : 400 000 € par enfant sans un centime d'impôt.",
+    },
+    {
+        q: "Combien coûtent les droits de succession entre frères et sœurs ?",
+        a: "Ils sont très élevés : 35% jusqu'à 24 430 € puis 45% au-delà, après un abattement de seulement 15 932 €. Pour 100 000 € hérités, les droits s'élèvent à environ 37 000 €. Exception : exonération possible si le frère/la sœur était célibataire ou veuf(ve), vivait avec le défunt depuis 5 ans et avait plus de 50 ans.",
+    },
+    {
+        q: "Qu'est-ce que la SCI familiale et quelle est son utilité en succession ?",
+        a: "La Société Civile Immobilière (SCI) familiale permet de loger des biens immobiliers dans une société dont les parents et enfants sont associés. En transmettant des parts progressivement (chaque année ou tous les 15 ans), on bénéficie d'une <strong>décote d'illiquidité de 15 à 20%</strong> reconnue fiscalement sur la valeur des parts. Rentable à partir de 250 000 € de patrimoine immobilier.",
+    },
+    {
+        q: "Qu'est-ce que le Pacte Dutreil ?",
+        a: "Le Pacte Dutreil permet de transmettre une entreprise avec un <strong>abattement de 75%</strong> sur sa valeur. Applicable aux entreprises individuelles et aux sociétés (IS ou IR), à condition que les héritiers s'engagent à conserver les titres 4 ans. C'est l'outil de transmission d'entreprise le plus puissant du droit fiscal français.",
+    },
+    {
+        q: "Peut-on contester une succession et dans quel délai ?",
+        a: "Oui. Un héritier réservataire (enfant, conjoint) dispose en général d'un délai de <strong>5 ans</strong> à compter de l'acceptation de la succession pour contester le testament. Pour les donations, le délai est de 5 ans à compter du décès. La réserve héréditaire protège les enfants : un parent ne peut pas les déshériter totalement.",
+    },
+];
+
+function renderFAQ() {
+    document.getElementById('faq-container').innerHTML = FAQ.map((f, i) => `
+        <div class="faq-item" onclick="toggleFAQ(${i})">
+            <div class="faq-q">${f.q}</div>
+            <div class="faq-a">${f.a}</div>
+        </div>
+    `).join('');
+
+    document.getElementById('faq-ld').textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": FAQ.map(f => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": { "@type": "Answer", "text": f.a.replace(/<[^>]+>/g, '') }
+        }))
+    }, null, 2);
+}
+
+function toggleFAQ(i) {
+    document.querySelectorAll('.faq-item')[i].classList.toggle('open');
+}
+
+// =====================================================================
+// INIT
+// =====================================================================
+renderHeirs();
+renderFAQ();
+</script>
+</body>
+</html>
